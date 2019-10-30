@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    image: "postgres"
+    container_name: "booking-db"
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=P@ssw0rd
+      - POSTGRES_DB=db
+    ports:
+      - "54320:5432"
+    volumes:
+      - /var/docker/postgres-data:/var/lib/postgresql/data
